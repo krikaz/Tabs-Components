@@ -12,17 +12,17 @@ class TabLink {
 
     
     // Using the custom data attribute get the associated Item element
-    const selector = `.tabs-item [data-tab]="${this.data}"`;
+    const selector = '.tabs-item[data-tab="${this.data}"]'
     this.itemElement = document.querySelector(selector);
     console.log(this.itemElement);
     
     // Using the Item element, create a new instance of the TabItem class
-    this.tabItem = new TabItem(itemElement);
+    // this.tabItem = new TabItem(this.itemElement);
     
     // Add a click event listener on this instance, calling the select method on click
-    this.tabItem.addEventListener('click', () => {
-      this.select();
-    });
+    // this.tabItem.addEventListener('click', () => {
+    //   this.select();
+    // });
 
   };
 
